@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WhiteLagoon.Domain.Entities.Villa>
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-success bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Villa List</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body border p-4">
+
+        <div class="row pb-3">
+            <div class="col-6 offset-6 text-end">
+                <a asp-controller="Villa" asp-action="Create" class="btn btn-secondary">
+                    <i class="bi bi-plus-circle"></i>    Create New Villa
+                </a>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Sqft</th>
+                    <th>Occupancy</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Price</td>
+                        <td>@item.Sqft</td>
+                        <td>@item.Occupancy</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
