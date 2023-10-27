@@ -36,8 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Villa/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Villa/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Villa/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/_ViewImports.cshtml]
