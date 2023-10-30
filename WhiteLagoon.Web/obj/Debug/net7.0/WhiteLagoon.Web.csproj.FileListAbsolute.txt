@@ -77,3 +77,4 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\WhiteL
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\ref\WhiteLagoon.Web.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteLagoon.Domain.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteLagoon.Domain.pdb
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\WhiteLagoon.Web.MvcApplicationPartsAssemblyInfo.cs

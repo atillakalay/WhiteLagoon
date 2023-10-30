@@ -9,3 +9,4 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Domain\obj\Debug\net7.0\Whi
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Domain\obj\Debug\net7.0\refint\WhiteLagoon.Domain.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Domain\obj\Debug\net7.0\WhiteLagoon.Domain.pdb
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Domain\obj\Debug\net7.0\ref\WhiteLagoon.Domain.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Domain\obj\Debug\net7.0\WhiteLagoon.Domain.csproj.AssemblyReference.cache
