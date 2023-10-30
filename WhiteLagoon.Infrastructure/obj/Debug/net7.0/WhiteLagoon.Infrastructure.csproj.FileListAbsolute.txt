@@ -15,3 +15,5 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\obj\Debug\ne
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\bin\Debug\net7.0\WhiteLagoon.Domain.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\bin\Debug\net7.0\WhiteLagoon.Domain.pdb
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\obj\Debug\net7.0\WhiteLagoon.Infrastructure.csproj.CopyComplete
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\bin\Debug\net7.0\WhiteLagoon.Application.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\bin\Debug\net7.0\WhiteLagoon.Application.pdb

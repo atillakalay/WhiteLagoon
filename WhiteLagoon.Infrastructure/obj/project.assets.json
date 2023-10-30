@@ -1421,6 +1421,19 @@
           }
         }
       },
+      "WhiteLagoon.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "WhiteLagoon.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WhiteLagoon.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WhiteLagoon.Application.dll": {}
+        }
+      },
       "WhiteLagoon.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3547,6 +3560,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "WhiteLagoon.Application/1.0.0": {
+      "type": "project",
+      "path": "../WhiteLagoon.Application/WhiteLagoon.Application.csproj",
+      "msbuildProject": "../WhiteLagoon.Application/WhiteLagoon.Application.csproj"
+    },
     "WhiteLagoon.Domain/1.0.0": {
       "type": "project",
       "path": "../WhiteLagoon.Domain/WhiteLagoon.Domain.csproj",
@@ -3558,6 +3576,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
+      "WhiteLagoon.Application >= 1.0.0",
       "WhiteLagoon.Domain >= 1.0.0"
     ]
   },
@@ -3593,6 +3612,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Application\\WhiteLagoon.Application.csproj": {
+              "projectPath": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Application\\WhiteLagoon.Application.csproj"
+            },
             "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Domain\\WhiteLagoon.Domain.csproj": {
               "projectPath": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Domain\\WhiteLagoon.Domain.csproj"
             }

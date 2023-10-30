@@ -9,3 +9,7 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.0\refint\WhiteLagoon.Application.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.0\WhiteLagoon.Application.pdb
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.0\ref\WhiteLagoon.Application.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net7.0\WhiteLagoon.Domain.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net7.0\WhiteLagoon.Domain.pdb
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.0\WhiteLagoon.Application.csproj.AssemblyReference.cache
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.0\WhiteLagoon.Application.csproj.CopyComplete
