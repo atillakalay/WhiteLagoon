@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using WhiteLagoon.Application.Common.Interfaces;
 using WhiteLagoon.Domain.Entities;
-using WhiteLagoon.Infrastructure.Data;
 using WhiteLagoon.Web.ViewModels;
 
 namespace WhiteLagoon.Web.Controllers
@@ -19,7 +17,7 @@ namespace WhiteLagoon.Web.Controllers
 
         public IActionResult Index()
         {
-            var villaNumbers = _unitOfWork.VillaNumber.GetAll(includeProperties:"Villa");
+            var villaNumbers = _unitOfWork.VillaNumber.GetAll(includeProperties: "Villa");
             return View(villaNumbers);
         }
         public IActionResult Create()
