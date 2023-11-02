@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using WhiteLagoon.Domain.Entities;
 
 namespace WhiteLagoon.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -12,9 +13,12 @@ namespace WhiteLagoon.Infrastructure.Data
         public DbSet<Villa> Villas { get; set; }
         public DbSet<VillaNumber> VillaNumbers { get; set; }
         public DbSet<Amenity> Amenities { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Villa>().HasData(
                 new Villa
                 {
@@ -110,17 +114,20 @@ namespace WhiteLagoon.Infrastructure.Data
               Id = 1,
               VillaId = 1,
               Name = "Private Pool"
-          }, new Amenity
+          },
+          new Amenity
           {
               Id = 2,
               VillaId = 1,
               Name = "Microwave"
-          }, new Amenity
+          },
+          new Amenity
           {
               Id = 3,
               VillaId = 1,
               Name = "Private Balcony"
-          }, new Amenity
+          },
+          new Amenity
           {
               Id = 4,
               VillaId = 1,
@@ -131,17 +138,20 @@ namespace WhiteLagoon.Infrastructure.Data
               Id = 5,
               VillaId = 2,
               Name = "Private Plunge Pool"
-          }, new Amenity
+          },
+          new Amenity
           {
               Id = 6,
               VillaId = 2,
               Name = "Microwave and Mini Refrigerator"
-          }, new Amenity
+          },
+          new Amenity
           {
               Id = 7,
               VillaId = 2,
               Name = "Private Balcony"
-          }, new Amenity
+          },
+          new Amenity
           {
               Id = 8,
               VillaId = 2,
@@ -152,12 +162,14 @@ namespace WhiteLagoon.Infrastructure.Data
               Id = 9,
               VillaId = 3,
               Name = "Private Pool"
-          }, new Amenity
+          },
+          new Amenity
           {
               Id = 10,
               VillaId = 3,
               Name = "Jacuzzi"
-          }, new Amenity
+          },
+          new Amenity
           {
               Id = 11,
               VillaId = 3,

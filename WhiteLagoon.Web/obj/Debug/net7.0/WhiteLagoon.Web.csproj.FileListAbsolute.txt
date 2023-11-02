@@ -80,3 +80,9 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteL
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\WhiteLagoon.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteLagoon.Application.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteLagoon.Application.pdb
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

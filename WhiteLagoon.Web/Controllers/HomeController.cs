@@ -16,7 +16,7 @@ namespace WhiteLagoon.Web.Controllers
         {
             HomeViewModel homeViewModel = new()
             {
-                VillaList = _unitOfWork.Villa.GetAll(includeProperties:"VillaAmenity"),
+                VillaList = _unitOfWork.Villa.GetAll(includeProperties: "VillaAmenity"),
                 Nights = 1,
                 CheckInDate = DateOnly.FromDateTime(DateTime.Now),
             };
