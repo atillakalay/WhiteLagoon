@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\css\\spinner.css",
+      "PackagePath": "staticwebassets\\css\\spinner.css"
+    },
+    {
       "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -79,6 +83,30 @@
     {
       "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\images\\slide2.jpg",
       "PackagePath": "staticwebassets\\images\\slide2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\jquery-ajax-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\jquery-ajax-unobtrusive\\README.md",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.js",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.js"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.min.js",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\jquery-ajax-unobtrusive\\package.json",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.unobtrusive-ajax.min.js"
     },
     {
       "Id": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Web\\wwwroot\\js\\site.js",

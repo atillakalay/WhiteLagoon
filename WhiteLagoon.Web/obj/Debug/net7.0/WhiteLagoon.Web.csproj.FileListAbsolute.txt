@@ -86,3 +86,4 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Micros
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\libman.json
