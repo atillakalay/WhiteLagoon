@@ -320,6 +320,80 @@ namespace WhiteLagoon.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("WhiteLagoon.Domain.Entities.Booking", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("ActualCheckInDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ActualCheckOutDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("BookingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CheckInDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CheckOutDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsPaymentSuccessful")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Nights")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StripePaymentIntentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StripeSessionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("TotalCost")
+                        .HasColumnType("float");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("VillaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VillaNumber")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("VillaId");
+
+                    b.ToTable("Bookings");
+                });
+
             modelBuilder.Entity("WhiteLagoon.Domain.Entities.Villa", b =>
                 {
                     b.Property<int>("Id")
@@ -362,38 +436,38 @@ namespace WhiteLagoon.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Created_Date = new DateTime(2023, 11, 2, 11, 19, 28, 480, DateTimeKind.Local).AddTicks(4087),
+                            Created_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(7983),
                             Description = "Bu lüks deniz villası, harika bir manzaraya sahiptir ve 8 kişiye kadar konaklama imkanı sunar.",
                             ImageUrl = "https://example.com/villa1.jpg",
                             Name = "Lüks Deniz Villası",
                             Occupancy = 8,
                             Price = 500.0,
                             Sqft = 3000,
-                            Updated_Date = new DateTime(2023, 11, 2, 11, 19, 28, 480, DateTimeKind.Local).AddTicks(4100)
+                            Updated_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(7995)
                         },
                         new
                         {
                             Id = 2,
-                            Created_Date = new DateTime(2023, 11, 2, 11, 19, 28, 480, DateTimeKind.Local).AddTicks(4103),
+                            Created_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(7997),
                             Description = "Ormanın huzurlu atmosferinde bulunan bu villa, doğa severler için mükemmel bir seçenektir.",
                             ImageUrl = "https://example.com/villa2.jpg",
                             Name = "Orman Kenarı Villa",
                             Occupancy = 6,
                             Price = 400.0,
                             Sqft = 2500,
-                            Updated_Date = new DateTime(2023, 11, 2, 11, 19, 28, 480, DateTimeKind.Local).AddTicks(4104)
+                            Updated_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(7998)
                         },
                         new
                         {
                             Id = 3,
-                            Created_Date = new DateTime(2023, 11, 2, 11, 19, 28, 480, DateTimeKind.Local).AddTicks(4106),
+                            Created_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(8000),
                             Description = "Şehir merkezinde yer alan bu stüdyo daire, iş seyahati yapanlar için idealdir.",
                             ImageUrl = "https://example.com/villa3.jpg",
                             Name = "Şehir Merkezi Stüdyo Dairesi",
                             Occupancy = 2,
                             Price = 100.0,
                             Sqft = 800,
-                            Updated_Date = new DateTime(2023, 11, 2, 11, 19, 28, 480, DateTimeKind.Local).AddTicks(4107)
+                            Updated_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(8001)
                         });
                 });
 
@@ -525,6 +599,25 @@ namespace WhiteLagoon.Infrastructure.Migrations
                         .HasForeignKey("VillaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Villa");
+                });
+
+            modelBuilder.Entity("WhiteLagoon.Domain.Entities.Booking", b =>
+                {
+                    b.HasOne("WhiteLagoon.Domain.Entities.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WhiteLagoon.Domain.Entities.Villa", "Villa")
+                        .WithMany()
+                        .HasForeignKey("VillaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
 
                     b.Navigation("Villa");
                 });

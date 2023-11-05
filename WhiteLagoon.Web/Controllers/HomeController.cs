@@ -23,13 +23,6 @@ namespace WhiteLagoon.Web.Controllers
             return View(homeViewModel);
         }
         [HttpPost]
-        public IActionResult Index(HomeViewModel homeViewModel)
-        {
-            homeViewModel.VillaList = _unitOfWork.Villa.GetAll(includeProperties: "VillaAmenity");
-
-            return View(homeViewModel);
-        }
-
         public IActionResult GetVillasByDate(int nights, DateOnly checkInDate)
         {
             var villaList = _unitOfWork.Villa.GetAll(includeProperties: "VillaAmenity").ToList();
@@ -47,7 +40,7 @@ namespace WhiteLagoon.Web.Controllers
                 CheckInDate = checkInDate,
             };
 
-            return PartialView("_VillaList",homeViewModel);
+            return PartialView("_VillaList", homeViewModel);
         }
 
         public IActionResult Privacy()

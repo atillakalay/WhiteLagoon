@@ -277,6 +277,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[43.1.0, )"
             }
           },
           "imports": [
