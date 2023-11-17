@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "acMzmixBhi74LF4o1+CC8AgxzWQhTBOKZvyo7+1Hk19lLfvezsB1d9XbaONqiuEQB+91sA5GmBYKADZ6u9J7hw==",
+  "dgSpecHash": "9Ygx3nEXcUp0zdcOHmIxRZxIsEeznXQUXlI/n/7nUzTpp19MeQM5YxQr8UCOA4RpUHPY1041ofpS/3oJZZcdsg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Atilla\\source\\repos\\WhiteLagoon\\WhiteLagoon.Infrastructure\\WhiteLagoon.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,8 @@
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Atilla\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Atilla\\.nuget\\packages\\stripe.net\\41.27.0\\stripe.net.41.27.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",

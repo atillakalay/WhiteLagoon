@@ -13,3 +13,4 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net7.
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net7.0\WhiteLagoon.Domain.pdb
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.0\WhiteLagoon.Application.csproj.AssemblyReference.cache
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.0\WhiteLagoon.Application.csproj.CopyComplete
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net7.0\WhiteLagoon.Application.sourcelink.json

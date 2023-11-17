@@ -9,7 +9,6 @@ namespace WhiteLagoon.Infrastructure.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-
         public DbSet<Villa> Villas { get; set; }
         public DbSet<VillaNumber> VillaNumbers { get; set; }
         public DbSet<Amenity> Amenities { get; set; }
@@ -24,38 +23,32 @@ namespace WhiteLagoon.Infrastructure.Data
                 new Villa
                 {
                     Id = 1,
-                    Name = "Lüks Deniz Villası",
-                    Description = "Bu lüks deniz villası, harika bir manzaraya sahiptir ve 8 kişiye kadar konaklama imkanı sunar.",
-                    Price = 500.00,
-                    Sqft = 3000,
-                    Occupancy = 8,
-                    ImageUrl = "https://example.com/villa1.jpg",
-                    Created_Date = DateTime.Now,
-                    Updated_Date = DateTime.Now
+                    Name = "Kraliyet Villası",
+                    Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                    ImageUrl = "https://placehold.co/600x400",
+                    Occupancy = 4,
+                    Price = 200,
+                    Sqft = 550,
                 },
                 new Villa
                 {
                     Id = 2,
-                    Name = "Orman Kenarı Villa",
-                    Description = "Ormanın huzurlu atmosferinde bulunan bu villa, doğa severler için mükemmel bir seçenektir.",
-                    Price = 400.00,
-                    Sqft = 2500,
-                    Occupancy = 6,
-                    ImageUrl = "https://example.com/villa2.jpg",
-                    Created_Date = DateTime.Now,
-                    Updated_Date = DateTime.Now
+                    Name = "Premium Havuzlu Villa",
+                    Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                    ImageUrl = "https://placehold.co/600x401",
+                    Occupancy = 4,
+                    Price = 300,
+                    Sqft = 550,
                 },
                 new Villa
                 {
                     Id = 3,
-                    Name = "Şehir Merkezi Stüdyo Dairesi",
-                    Description = "Şehir merkezinde yer alan bu stüdyo daire, iş seyahati yapanlar için idealdir.",
-                    Price = 100.00,
-                    Sqft = 800,
-                    Occupancy = 2,
-                    ImageUrl = "https://example.com/villa3.jpg",
-                    Created_Date = DateTime.Now,
-                    Updated_Date = DateTime.Now
+                    Name = "Lüks Havuzlu Villa",
+                    Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                    ImageUrl = "https://placehold.co/600x402",
+                    Occupancy = 4,
+                    Price = 400,
+                    Sqft = 750,
                 });
 
             modelBuilder.Entity<VillaNumber>().HasData(
@@ -103,79 +96,71 @@ namespace WhiteLagoon.Infrastructure.Data
                 {
                     Villa_Number = 302,
                     VillaId = 3,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 204,
-                    VillaId = 2,
-                });
+                }
+                );
+
             modelBuilder.Entity<Amenity>().HasData(
           new Amenity
           {
               Id = 1,
               VillaId = 1,
-              Name = "Private Pool"
-          },
-          new Amenity
+              Name = "Özel Havuz"
+          }, new Amenity
           {
               Id = 2,
               VillaId = 1,
-              Name = "Microwave"
-          },
-          new Amenity
+              Name = "Mikrodalga"
+          }, new Amenity
           {
               Id = 3,
               VillaId = 1,
-              Name = "Private Balcony"
-          },
-          new Amenity
+              Name = "Özel balkon"
+          }, new Amenity
           {
               Id = 4,
               VillaId = 1,
-              Name = "1 king bed and 1 sofa bed"
+              Name = "1 kral yatağı ve 1 koltuk"
           },
+
           new Amenity
           {
               Id = 5,
               VillaId = 2,
-              Name = "Private Plunge Pool"
-          },
-          new Amenity
+              Name = "Özel Dalma Havuzu"
+          }, new Amenity
           {
               Id = 6,
               VillaId = 2,
-              Name = "Microwave and Mini Refrigerator"
-          },
-          new Amenity
+              Name = "Mikrodalga ve Mini Buzdolabı"
+          }, new Amenity
           {
               Id = 7,
               VillaId = 2,
-              Name = "Private Balcony"
-          },
-          new Amenity
+              Name = "Özel Balkon"
+          }, new Amenity
           {
               Id = 8,
               VillaId = 2,
-              Name = "king bed or 2 double beds"
+              Name = "kral yatağı veya 2 adet çift kişilik yatak"
           },
+
           new Amenity
           {
               Id = 9,
               VillaId = 3,
-              Name = "Private Pool"
-          },
-          new Amenity
+              Name = "Özel Havuz"
+          }, new Amenity
           {
               Id = 10,
               VillaId = 3,
-              Name = "Jacuzzi"
-          },
-          new Amenity
+              Name = "Jakuzi"
+          }, new Amenity
           {
               Id = 11,
               VillaId = 3,
-              Name = "Private Balcony"
+              Name = "Özel Balkon"
           });
+
         }
     }
 }

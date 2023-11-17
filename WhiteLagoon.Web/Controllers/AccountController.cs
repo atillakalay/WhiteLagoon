@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using WhiteLagoon.Application.Common.Interfaces;
 using WhiteLagoon.Application.Common.Utility;
 using WhiteLagoon.Domain.Entities;
 using WhiteLagoon.Web.ViewModels;
@@ -10,21 +9,26 @@ namespace WhiteLagoon.Web.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly IUnitOfWork _unitOfWork;
+
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountController(IUnitOfWork unitOfWork, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager)
+        public AccountController(
+            UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager,
+            SignInManager<ApplicationUser> signInManager)
         {
-            _unitOfWork = unitOfWork;
+            _roleManager = roleManager;
             _userManager = userManager;
             _signInManager = signInManager;
-            _roleManager = roleManager;
         }
+
         public IActionResult Login(string returnUrl = null)
         {
+
             returnUrl ??= Url.Content("~/");
+
             LoginViewModel loginViewModel = new()
             {
                 RedirectUrl = returnUrl
@@ -33,28 +37,15 @@ namespace WhiteLagoon.Web.Controllers
             return View(loginViewModel);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel loginViewModel)
+        public async Task<IActionResult> Logout()
         {
-            if (ModelState.IsValid)
-            {
-                var result = await _signInManager.PasswordSignInAsync(loginViewModel.Email, loginViewModel.Password, loginViewModel.RememberMe, lockoutOnFailure: false);
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
 
-
-                if (string.IsNullOrEmpty(loginViewModel.RedirectUrl))
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    return LocalRedirect(loginViewModel.RedirectUrl);
-                }
-            }
-            else
-            {
-                ModelState.AddModelError("", "Invalid login attempt");
-            }
-            return View(loginViewModel);
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
 
         public IActionResult Register(string returnUrl = null)
@@ -64,7 +55,6 @@ namespace WhiteLagoon.Web.Controllers
             {
                 _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).Wait();
                 _roleManager.CreateAsync(new IdentityRole(SD.Role_Customer)).Wait();
-
             }
 
             RegisterViewModel registerViewModel = new()
@@ -77,53 +67,54 @@ namespace WhiteLagoon.Web.Controllers
                 RedirectUrl = returnUrl
             };
 
-
             return View(registerViewModel);
         }
+
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
         {
-            ApplicationUser applicationUser = new()
+            if (ModelState.IsValid)
             {
-                Name = registerViewModel.Name,
-                Email = registerViewModel.Email,
-                PhoneNumber = registerViewModel.PhoneNumber,
-                NormalizedEmail = registerViewModel.Email.ToUpper(),
-                EmailConfirmed = true,
-                UserName = registerViewModel.Email,
-                CreatedAt = DateTime.Now
-            };
-
-            var result = await _userManager.CreateAsync(applicationUser, registerViewModel.Password);
-
-            if (result.Succeeded)
-            {
-                if (!string.IsNullOrEmpty(registerViewModel.Role))
+                ApplicationUser user = new()
                 {
-                    await _userManager.AddToRoleAsync(applicationUser, registerViewModel.Role);
+                    Name = registerViewModel.Name,
+                    Email = registerViewModel.Email,
+                    PhoneNumber = registerViewModel.PhoneNumber,
+                    NormalizedEmail = registerViewModel.Email.ToUpper(),
+                    EmailConfirmed = true,
+                    UserName = registerViewModel.Email,
+                    CreatedAt = DateTime.Now
+                };
+
+                var result = await _userManager.CreateAsync(user, registerViewModel.Password);
+
+                if (result.Succeeded)
+                {
+                    if (!string.IsNullOrEmpty(registerViewModel.Role))
+                    {
+                        await _userManager.AddToRoleAsync(user, registerViewModel.Role);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, SD.Role_Customer);
+                    }
+
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    if (string.IsNullOrEmpty(registerViewModel.RedirectUrl))
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        return LocalRedirect(registerViewModel.RedirectUrl);
+                    }
                 }
-                else
-                {
-                    await _userManager.AddToRoleAsync(applicationUser, SD.Role_Customer);
-                }
 
-                await _signInManager.SignInAsync(applicationUser, isPersistent: false);
-
-                if (string.IsNullOrEmpty(registerViewModel.RedirectUrl))
+                foreach (var error in result.Errors)
                 {
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    return LocalRedirect(registerViewModel.RedirectUrl);
+                    ModelState.AddModelError("", error.Description);
                 }
             }
-
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error.Description);
-            }
-
             registerViewModel.RoleList = _roleManager.Roles.Select(x => new SelectListItem
             {
                 Text = x.Name,
@@ -133,15 +124,41 @@ namespace WhiteLagoon.Web.Controllers
             return View(registerViewModel);
         }
 
-        public async Task<IActionResult> Logout()
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
-        }
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager
+                    .PasswordSignInAsync(loginViewModel.Email, loginViewModel.Password, loginViewModel.RememberMe, lockoutOnFailure: false);
 
-        public IActionResult AccessDenied()
-        {
-            return View();
+
+                if (result.Succeeded)
+                {
+                    var user = await _userManager.FindByEmailAsync(loginViewModel.Email);
+                    if (await _userManager.IsInRoleAsync(user, SD.Role_Admin))
+                    {
+                        return RedirectToAction("Index", "Dashboard");
+                    }
+                    else
+                    {
+                        if (string.IsNullOrEmpty(loginViewModel.RedirectUrl))
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
+                        else
+                        {
+                            return LocalRedirect(loginViewModel.RedirectUrl);
+                        }
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid login attempt.");
+                }
+            }
+
+            return View(loginViewModel);
         }
     }
 }

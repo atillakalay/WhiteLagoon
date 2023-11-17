@@ -14,16 +14,16 @@
                 <div class="col-md-12">
                     <section>
                         <form method="post">
-                            <input asp-for="RedirectUrl" hidden/>
+                            <input asp-for="RedirectUrl" hidden />
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" asp-for="Email" aria-required="true" />
-                                <label class="form-label">Email</label>
+                                <input asp-for="Email" class="form-control" aria-required="true" />
+                                <label asp-for="Email" class="form-label"></label>
                                 <span asp-validation-for="Email" class="text-danger"></span>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" asp-for="Password" aria-required="true" />
-                                <label class="form-label">Password</label>
+                                <input asp-for="Password" class="form-control" aria-required="true" />
+                                <label asp-for="Password" class="form-label"></label>
                                 <span asp-validation-for="Password" class="text-danger"></span>
                             </div>
                             <div class="checkbox mb-3">
@@ -53,6 +53,6 @@
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

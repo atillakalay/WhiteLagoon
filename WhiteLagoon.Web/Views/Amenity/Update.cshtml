@@ -10,50 +10,45 @@
     </div>
     <div class="card-body border p-4">
         <form method="post" class="row">
-            <input hidden asp-for="Amenity.Id"/>
+            <input hidden asp-for="Amenity.Id" />
             <div class="p-3">
                 <div class="form-floating py-1 col-12">
-                    <select asp-for="@Model.Amenity.VillaId" asp-items="@Model.VillaList as IEnumerable<SelectListItem>" class="form-select border shadow">
-                        <option disabled selected>-- Select Villa --</option>
+                    <select asp-for="@Model.Amenity.VillaId" asp-items="@Model.VillaList"
+                            class="form-select border shadow">
+                        <option disabled selected>--Select Villa--</option>
                     </select>
-                    <label asp-for="@Model.Amenity.VillaId" class="ms-2"></label>
-                    <span asp-validation-for="@Model.Amenity.VillaId" class="text-danger"></span>
+                    <label asp-for="Amenity.VillaId" class="ms-2"></label>
+                    <span asp-validation-for="Amenity.VillaId" class="text-danger"></span>
                 </div>
-            </div>
-            <div class="p-3">
                 <div class="form-floating py-1 col-12">
-                    <input asp-for="@Model.Amenity.Name" class="form-control border shadow" />
-                    <label asp-for="@Model.Amenity.Name" class="ms-2"></label>
-                    <span asp-validation-for="@Model.Amenity.Name" class="text-danger"></span>
+                    <input asp-for="Amenity.Name" class="form-control border shadow" />
+                    <label asp-for="Amenity.Name" class="ms-2"></label>
+                    <span asp-validation-for="Amenity.Name" class="text-danger"></span>
                 </div>
-            </div>
-            <div class="p-3">
                 <div class="form-floating py-1 col-12">
-                    <input asp-for="@Model.Amenity.Description" class="form-control border shadow" />
-                    <label asp-for="@Model.Amenity.Description" class="ms-2"></label>
-                    <span asp-validation-for="@Model.Amenity.Description" class="text-danger"></span>
+                    <input asp-for="Amenity.Description" class="form-control border shadow" />
+                    <label asp-for="Amenity.Description" class="ms-2"></label>
+                    <span asp-validation-for="Amenity.Description" class="text-danger"></span>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="bi bi-check-circle"></i> Update
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Amenity" asp-action="Index" class="btn btn-secondary w-100">
+                            <i class="bi bi-x-circle"></i> Cancel
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <div class="row pt-2">
-                <div class="col-6 col-md-3">
-                    <button type="submit" class="btn btn-success w-100">
-                        <i class="bi bi-check-circle"></i> Update
-                    </button>
-                </div>
-                <div class="col-6 col-md-3">
-                    <a asp-controller="Amenity" asp-action="Index" class="btn btn-secondary w-100">
-                        <i class="bi bi-x-circle"></i> Cancel
-                    </a>
-                </div>
-            </div>
-
-
         </form>
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     @{
         <partial name="_ValidationScriptsPartial" />
     }

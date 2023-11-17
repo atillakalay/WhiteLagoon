@@ -4,9 +4,9 @@
     {
         IVillaRepository Villa { get; }
         IVillaNumberRepository VillaNumber { get; }
-        IAmenityRepository Amenity { get; }
         IBookingRepository Booking { get; }
         IApplicationUserRepository User { get; }
+        IAmenityRepository Amenity { get; }
         void Save();
     }
 }

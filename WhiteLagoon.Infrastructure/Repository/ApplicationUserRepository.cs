@@ -6,11 +6,11 @@ namespace WhiteLagoon.Infrastructure.Repository
 {
     public class ApplicationUserRepository : Repository<ApplicationUser>, IApplicationUserRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _db;
 
-        public ApplicationUserRepository(ApplicationDbContext context) : base(context)
+        public ApplicationUserRepository(ApplicationDbContext db) : base(db)
         {
-            _context = context;
+            _db = db;
         }
 
     }

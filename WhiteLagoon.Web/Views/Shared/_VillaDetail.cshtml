@@ -1,4 +1,4 @@
-﻿@using System.Globalization;
+﻿@using System.Globalization
 @model Villa
 
 <div class="row">
@@ -10,13 +10,13 @@
             <div class="col-12">
                 <p class="card-title text-warning" style="font-size:xx-large">@Model.Name</p>
                 <p class="card-text" style="font-size:large">
-                    @Html.Raw(@Model.Description)
+                    @Html.Raw(Model.Description)
                 </p>
-                @if (@Model.VillaAmenity != null && @Model.VillaAmenity.Count() > 0)
+                @if (Model.VillaAmenity != null && Model.VillaAmenity.Count() > 0)
                 {
                     <p class="h5 text-white">Villa Amenities</p>
                     <ul>
-                        @foreach (var amenity in @Model.VillaAmenity)
+                        @foreach (var amenity in Model.VillaAmenity)
                         {
                             <li>@amenity.Name</li>
                         }
@@ -27,9 +27,9 @@
         <div class="row col-12">
             <span class="text-end p-0 pt-3 m-0">
                 <span class="float-right">Max Occupancy : @Model.Occupancy adults </span><br />
-                <span class="float-right pt-1">@Model Size : @Model.Sqft sqft</span><br />
+                <span class="float-right pt-1">Villa Size : @Model.Sqft sqft</span><br />
                 <p class="text-warning font-weight-bold pt-1">
-                    TL
+                    USD
                     <span style=" #ff6a00">
                         @Model.Price.ToString("C2", new CultureInfo("tr-TR")) / night
                     </span>

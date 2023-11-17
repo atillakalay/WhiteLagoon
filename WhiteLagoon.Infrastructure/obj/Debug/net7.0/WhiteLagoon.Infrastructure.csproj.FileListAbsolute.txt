@@ -17,3 +17,4 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\bin\Debug\ne
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\obj\Debug\net7.0\WhiteLagoon.Infrastructure.csproj.CopyComplete
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\bin\Debug\net7.0\WhiteLagoon.Application.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\bin\Debug\net7.0\WhiteLagoon.Application.pdb
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Infrastructure\obj\Debug\net7.0\WhiteLagoon.Infrastructure.sourcelink.json

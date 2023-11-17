@@ -4,6 +4,6 @@ namespace WhiteLagoon.Application.Common.Interfaces
 {
     public interface IAmenityRepository : IRepository<Amenity>
     {
-        void Update(Amenity amenity);
+        void Update(Amenity entity);
     }
 }

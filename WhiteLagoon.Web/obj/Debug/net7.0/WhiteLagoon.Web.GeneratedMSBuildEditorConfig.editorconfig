@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WhiteLagoon.Web
 build_property.RootNamespace = WhiteLagoon.Web
 build_property.ProjectDir = C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -48,8 +50,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29raW5nQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Booking/BookingDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29raW5nRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Booking/FinalizeBooking.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xGaW5hbGl6ZUJvb2tpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Booking/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Home/Index.cshtml]
@@ -127,3 +141,11 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dkv7otyr4f
+
+[C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-rtk4kv684r
+
+[C:/Users/Atilla/source/repos/WhiteLagoon/WhiteLagoon.Web/Views/Shared/_LoginPartialAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWxBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-35g8911mjo

@@ -6,15 +6,16 @@ namespace WhiteLagoon.Infrastructure.Repository
 {
     public class VillaRepository : Repository<Villa>, IVillaRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _db;
 
-        public VillaRepository(ApplicationDbContext context) : base(context)
+        public VillaRepository(ApplicationDbContext db) : base(db)
         {
-            _context = context;
+            _db = db;
         }
-        public void Update(Villa villa)
+
+        public void Update(Villa entity)
         {
-            _context.Update(villa);
+            _db.Villas.Update(entity);
         }
     }
 }

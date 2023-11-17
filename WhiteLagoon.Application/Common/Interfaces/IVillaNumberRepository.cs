@@ -4,6 +4,6 @@ namespace WhiteLagoon.Application.Common.Interfaces
 {
     public interface IVillaNumberRepository : IRepository<VillaNumber>
     {
-        void Update(VillaNumber villaNumber);
+        void Update(VillaNumber entity);
     }
 }

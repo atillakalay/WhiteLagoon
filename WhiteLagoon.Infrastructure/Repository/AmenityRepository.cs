@@ -6,15 +6,16 @@ namespace WhiteLagoon.Infrastructure.Repository
 {
     public class AmenityRepository : Repository<Amenity>, IAmenityRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _db;
 
-        public AmenityRepository(ApplicationDbContext context) : base(context)
+        public AmenityRepository(ApplicationDbContext db) : base(db)
         {
-            _context = context;
+            _db = db;
         }
-        public void Update(Amenity amenity)
+
+        public void Update(Amenity entity)
         {
-            _context.Update(amenity);
+            _db.Amenities.Update(entity);
         }
     }
 }

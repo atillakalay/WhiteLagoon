@@ -1,4 +1,4 @@
-﻿@using System.Globalization;
+﻿@using System.Globalization
 @model Booking
 
 <div class="container pt-4 mt-0 mt-lg-4">
@@ -10,7 +10,8 @@
                     <h3 class="text-success">Villa Details</h3>
                 </div>
                 <div class="text-end col-6 ">
-                    <a asp-action="Index" asp-controller="Home" class="btn btn-sm btn-outline-danger" style="width:200px;">
+                    <a asp-controller="Home" asp-action="Index"
+                       class="btn btn-sm btn-outline-danger" style="width:200px;">
                         <i class="bi bi-arrow-left-square"></i> &nbsp; Modify Selection
                     </a>
                 </div>
@@ -31,10 +32,9 @@
             <form method="post">
                 <input asp-for="VillaId" hidden />
                 <input asp-for="UserId" hidden />
-                  <input asp-for="CheckInDate" hidden />
+                <input asp-for="CheckInDate" hidden />
                 <input asp-for="CheckOutDate" hidden />
                 <input asp-for="Nights" hidden />
-
                 <div class="row pt-1 mb-3 " style="border-radius:20px; ">
                     <div class="col-12">
                         <h3 class="text-success">Enter Booking Details</h3>
@@ -83,6 +83,6 @@
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <partial name="_ValidationScriptsPartial" />
-                    }
+}

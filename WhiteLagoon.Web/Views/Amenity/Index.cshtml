@@ -8,13 +8,11 @@
             </div>
         </div>
     </div>
-
     <div class="card-body border p-4">
-
         <div class="row pb-3">
             <div class="col-6 offset-6 text-end">
                 <a asp-controller="Amenity" asp-action="Create" class="btn btn-secondary">
-                    <i class="bi bi-plus-circle"></i>    Create New Amenity
+                    <i class="bi bi-plus-circle"></i> Create New Amenity
                 </a>
             </div>
         </div>
@@ -22,23 +20,31 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Id</th>
+                    <th>
+                        Id
+                    </th>
                     <th>Name</th>
                     <th>Villa Name</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @foreach (var obj in Model)
                 {
                     <tr>
-                        <td>@item.Id</td>
-                        <td>@item.Name</td>
-                        <td>@item.Villa.Name</td>
+                        <td>@obj.Id</td>
+                        <td>@obj.Name</td>
+                        <td>@obj.Villa.Name</td>
                         <td>
                             <div class="w-75 btn-group" role="group">
-                                <a asp-controller="Amenity" asp-action="Update" asp-route-amenityId="@item.Id" class="btn btn-success mx-2"><i class="bi bi-pencil-square"></i> Edit</a>
-                                <a asp-controller="Amenity" asp-action="Delete" asp-route-amenityId="@item.Id" class="btn btn-danger mx-2"><i class="bi bi-trash-fill"></i> Delete</a>
+                                <a asp-controller="Amenity" asp-action="Update" asp-route-amenityId="@obj.Id"
+                                   class="btn btn-success mx-2">
+                                    <i class="bi bi-pencil-square"></i> Edit
+                                </a>
+                                <a asp-controller="Amenity" asp-action="Delete" asp-route-amenityId="@obj.Id"
+                                   class="btn btn-danger mx-2">
+                                    <i class="bi bi-trash-fill"></i> Delete
+                                </a>
                             </div>
                         </td>
                     </tr>
@@ -47,5 +53,3 @@
         </table>
     </div>
 </div>
-
-

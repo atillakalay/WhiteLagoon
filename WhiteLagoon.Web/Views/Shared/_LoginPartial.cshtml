@@ -1,12 +1,14 @@
-﻿@inject UserManager<ApplicationUser> UserManager;
-@inject SignInManager<ApplicationUser> SignInManager;
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
-            <a class="nav-link" href="#">Hello, @UserManager.GetUserName(User)</a>
+            <a class="nav-link" href="#">Hello @UserManager.GetUserName(User)</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
@@ -21,5 +23,4 @@
             <a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
         </li>
     }
-
 </ul>

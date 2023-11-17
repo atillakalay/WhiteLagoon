@@ -77,7 +77,6 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\WhiteL
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\ref\WhiteLagoon.Web.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteLagoon.Domain.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteLagoon.Domain.pdb
-C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\WhiteLagoon.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteLagoon.Application.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\WhiteLagoon.Application.pdb
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
@@ -87,3 +86,8 @@ C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Micros
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\libman.json
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\bin\Debug\net7.0\Stripe.net.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\scopedcss\Views\Shared\_LoginPartialAdmin.cshtml.rz.scp.css
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Web\obj\Debug\net7.0\WhiteLagoon.Web.sourcelink.json

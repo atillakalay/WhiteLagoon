@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WhiteLagoon.Application
 build_property.ProjectDir = C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
