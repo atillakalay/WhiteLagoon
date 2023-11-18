@@ -8,16 +8,13 @@ namespace WhiteLagoon.Application.Services.Implementation
 {
     public class VillaService : IVillaService
     {
-
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHostEnvironment;
-
         public VillaService(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
         {
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
         }
-
         public void CreateVilla(Villa villa)
         {
             if (villa.Image != null)
@@ -38,7 +35,6 @@ namespace WhiteLagoon.Application.Services.Implementation
             _unitOfWork.Villa.Add(villa);
             _unitOfWork.Save();
         }
-
         public bool DeleteVilla(int id)
         {
             try
@@ -66,25 +62,20 @@ namespace WhiteLagoon.Application.Services.Implementation
                 return false;
             }
         }
-
         public IEnumerable<Villa> GetAllVillas()
         {
             return _unitOfWork.Villa.GetAll(includeProperties: "VillaAmenity");
         }
-
         public Villa GetVillaById(int id)
         {
             return _unitOfWork.Villa.Get(u => u.Id == id, includeProperties: "VillaAmenity");
         }
-
         public IEnumerable<Villa> GetVillasAvailabilityByDate(int nights, DateOnly checkInDate)
         {
             var villaList = _unitOfWork.Villa.GetAll(includeProperties: "VillaAmenity").ToList();
             var villaNumbersList = _unitOfWork.VillaNumber.GetAll().ToList();
             var bookedVillas = _unitOfWork.Booking.GetAll(u => u.Status == SD.StatusApproved ||
             u.Status == SD.StatusCheckedIn).ToList();
-
-
             foreach (var villa in villaList)
             {
                 int roomAvailable = SD.VillaRoomsAvailable_Count
@@ -92,10 +83,8 @@ namespace WhiteLagoon.Application.Services.Implementation
 
                 villa.IsAvailable = roomAvailable > 0 ? true : false;
             }
-
             return villaList;
         }
-
         public bool IsVillaAvailableByDate(int villaId, int nights, DateOnly checkInDate)
         {
             var villaNumbersList = _unitOfWork.VillaNumber.GetAll().ToList();
@@ -107,7 +96,6 @@ namespace WhiteLagoon.Application.Services.Implementation
 
             return roomAvailable > 0;
         }
-
         public void UpdateVilla(Villa villa)
         {
             if (villa.Image != null)
@@ -130,7 +118,6 @@ namespace WhiteLagoon.Application.Services.Implementation
 
                 villa.ImageUrl = @"\images\VillaImage\" + fileName;
             }
-
             _unitOfWork.Villa.Update(villa);
             _unitOfWork.Save();
         }

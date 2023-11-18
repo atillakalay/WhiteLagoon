@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 using WhiteLagoon.Application.Contract;
 
 namespace WhiteLagoon.Infrastructure.Emails
@@ -10,12 +12,10 @@ namespace WhiteLagoon.Infrastructure.Emails
         {
             _sendGridKey = configuration["SendGrid:Key"];
         }
-
-
         public async Task<bool> SendEmailAsync(string email, string subject, string message)
         {
             var client = new SendGridClient(_sendGridKey);
-            var from = new EmailAddress("atilla.kalayy@gmail.com", "AtillaKalay - White Lagoon");
+            var from = new EmailAddress("atilla.kalayy@gmail.com", "Atilla Kalay - White Lagoon");
             var to = new EmailAddress(email);
             var msg = MailHelper.CreateSingleEmail(from, to, subject, "", message);
             var response = await client.SendEmailAsync(msg);

@@ -7,6 +7,5 @@ namespace WhiteLagoon.Application.Services.Interface
     {
         SessionCreateOptions CreateStripeSessionOptions(Booking booking, Villa villa, string domain);
         Session CreateStripeSession(SessionCreateOptions options);
-
     }
 }

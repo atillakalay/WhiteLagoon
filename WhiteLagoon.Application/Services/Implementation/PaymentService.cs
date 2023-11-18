@@ -12,7 +12,6 @@ namespace WhiteLagoon.Application.Services.Implementation
             Session session = service.Create(options);
             return session;
         }
-
         public SessionCreateOptions CreateStripeSessionOptions(Booking booking, Villa villa, string domain)
         {
             var options = new SessionCreateOptions
@@ -22,8 +21,6 @@ namespace WhiteLagoon.Application.Services.Implementation
                 SuccessUrl = domain + $"booking/BookingConfirmation?bookingId={booking.Id}",
                 CancelUrl = domain + $"booking/FinalizeBooking?villaId={booking.VillaId}&checkInDate={booking.CheckInDate}&nights={booking.Nights}",
             };
-
-
             options.LineItems.Add(new SessionLineItemOptions
             {
                 PriceData = new SessionLineItemPriceDataOptions
@@ -37,7 +34,6 @@ namespace WhiteLagoon.Application.Services.Implementation
                 },
                 Quantity = 1,
             });
-
             return options;
         }
     }

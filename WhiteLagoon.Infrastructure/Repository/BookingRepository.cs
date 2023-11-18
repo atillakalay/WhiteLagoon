@@ -12,12 +12,9 @@ namespace WhiteLagoon.Infrastructure.Repository
         {
             _db = db;
         }
-
         public void Update(Booking entity)
         {
             _db.Bookings.Update(entity);
         }
-
-
     }
 }

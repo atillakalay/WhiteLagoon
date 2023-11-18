@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Presentation;
 using WhiteLagoon.Application.Services.Interface;
-using WhiteLagoon.Web.ViewModels;
+using WhiteLagoon.Web.Views.ViewModels;
 
 namespace WhiteLagoon.Web.Controllers
 {

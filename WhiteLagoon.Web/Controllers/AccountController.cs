@@ -3,27 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WhiteLagoon.Application.Common.Utility;
 using WhiteLagoon.Domain.Entities;
-using WhiteLagoon.Web.ViewModels;
+using WhiteLagoon.Web.Views.ViewModels;
 
 namespace WhiteLagoon.Web.Controllers
 {
     public class AccountController : Controller
     {
-
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-
-        public AccountController(
-            UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole> roleManager,
-            SignInManager<ApplicationUser> signInManager)
+        public AccountController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
             _signInManager = signInManager;
         }
-
         public IActionResult Login(string returnUrl = null)
         {
 
@@ -36,18 +30,15 @@ namespace WhiteLagoon.Web.Controllers
 
             return View(loginViewModel);
         }
-
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
         public IActionResult AccessDenied()
         {
             return View();
         }
-
         public IActionResult Register(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
@@ -69,7 +60,6 @@ namespace WhiteLagoon.Web.Controllers
 
             return View(registerViewModel);
         }
-
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
         {
@@ -85,7 +75,6 @@ namespace WhiteLagoon.Web.Controllers
                     UserName = registerViewModel.Email,
                     CreatedAt = DateTime.Now
                 };
-
                 var result = await _userManager.CreateAsync(user, registerViewModel.Password);
 
                 if (result.Succeeded)
@@ -109,7 +98,6 @@ namespace WhiteLagoon.Web.Controllers
                         return LocalRedirect(registerViewModel.RedirectUrl);
                     }
                 }
-
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError("", error.Description);
@@ -120,7 +108,6 @@ namespace WhiteLagoon.Web.Controllers
                 Text = x.Name,
                 Value = x.Name
             });
-
             return View(registerViewModel);
         }
 
@@ -131,8 +118,6 @@ namespace WhiteLagoon.Web.Controllers
             {
                 var result = await _signInManager
                     .PasswordSignInAsync(loginViewModel.Email, loginViewModel.Password, loginViewModel.RememberMe, lockoutOnFailure: false);
-
-
                 if (result.Succeeded)
                 {
                     var user = await _userManager.FindByEmailAsync(loginViewModel.Email);

@@ -17,7 +17,7 @@ namespace WhiteLagoon.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.13")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -183,67 +183,67 @@ namespace WhiteLagoon.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Private Pool",
+                            Name = "Özel Havuz",
                             VillaId = 1
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Microwave",
+                            Name = "Mikrodalga",
                             VillaId = 1
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Private Balcony",
+                            Name = "Özel balkon",
                             VillaId = 1
                         },
                         new
                         {
                             Id = 4,
-                            Name = "1 king bed and 1 sofa bed",
+                            Name = "1 kral yatağı ve 1 koltuk",
                             VillaId = 1
                         },
                         new
                         {
                             Id = 5,
-                            Name = "Private Plunge Pool",
+                            Name = "Özel Dalma Havuzu",
                             VillaId = 2
                         },
                         new
                         {
                             Id = 6,
-                            Name = "Microwave and Mini Refrigerator",
+                            Name = "Mikrodalga ve Mini Buzdolabı",
                             VillaId = 2
                         },
                         new
                         {
                             Id = 7,
-                            Name = "Private Balcony",
+                            Name = "Özel Balkon",
                             VillaId = 2
                         },
                         new
                         {
                             Id = 8,
-                            Name = "king bed or 2 double beds",
+                            Name = "kral yatağı veya 2 adet çift kişilik yatak",
                             VillaId = 2
                         },
                         new
                         {
                             Id = 9,
-                            Name = "Private Pool",
+                            Name = "Özel Havuz",
                             VillaId = 3
                         },
                         new
                         {
                             Id = 10,
-                            Name = "Jacuzzi",
+                            Name = "Jakuzi",
                             VillaId = 3
                         },
                         new
                         {
                             Id = 11,
-                            Name = "Private Balcony",
+                            Name = "Özel Balkon",
                             VillaId = 3
                         });
                 });
@@ -337,11 +337,11 @@ namespace WhiteLagoon.Infrastructure.Migrations
                     b.Property<DateTime>("BookingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("CheckInDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("CheckInDate")
+                        .HasColumnType("date");
 
-                    b.Property<DateTime>("CheckOutDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("CheckOutDate")
+                        .HasColumnType("date");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -436,38 +436,32 @@ namespace WhiteLagoon.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Created_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(7983),
-                            Description = "Bu lüks deniz villası, harika bir manzaraya sahiptir ve 8 kişiye kadar konaklama imkanı sunar.",
-                            ImageUrl = "https://example.com/villa1.jpg",
-                            Name = "Lüks Deniz Villası",
-                            Occupancy = 8,
-                            Price = 500.0,
-                            Sqft = 3000,
-                            Updated_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(7995)
+                            Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            ImageUrl = "https://placehold.co/600x400",
+                            Name = "Kraliyet Villası",
+                            Occupancy = 4,
+                            Price = 200.0,
+                            Sqft = 550
                         },
                         new
                         {
                             Id = 2,
-                            Created_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(7997),
-                            Description = "Ormanın huzurlu atmosferinde bulunan bu villa, doğa severler için mükemmel bir seçenektir.",
-                            ImageUrl = "https://example.com/villa2.jpg",
-                            Name = "Orman Kenarı Villa",
-                            Occupancy = 6,
-                            Price = 400.0,
-                            Sqft = 2500,
-                            Updated_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(7998)
+                            Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            ImageUrl = "https://placehold.co/600x401",
+                            Name = "Premium Havuzlu Villa",
+                            Occupancy = 4,
+                            Price = 300.0,
+                            Sqft = 550
                         },
                         new
                         {
                             Id = 3,
-                            Created_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(8000),
-                            Description = "Şehir merkezinde yer alan bu stüdyo daire, iş seyahati yapanlar için idealdir.",
-                            ImageUrl = "https://example.com/villa3.jpg",
-                            Name = "Şehir Merkezi Stüdyo Dairesi",
-                            Occupancy = 2,
-                            Price = 100.0,
-                            Sqft = 800,
-                            Updated_Date = new DateTime(2023, 11, 5, 20, 20, 2, 61, DateTimeKind.Local).AddTicks(8001)
+                            Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            ImageUrl = "https://placehold.co/600x402",
+                            Name = "Lüks Havuzlu Villa",
+                            Occupancy = 4,
+                            Price = 400.0,
+                            Sqft = 750
                         });
                 });
 
@@ -533,11 +527,6 @@ namespace WhiteLagoon.Infrastructure.Migrations
                         {
                             Villa_Number = 302,
                             VillaId = 3
-                        },
-                        new
-                        {
-                            Villa_Number = 204,
-                            VillaId = 2
                         });
                 });
 

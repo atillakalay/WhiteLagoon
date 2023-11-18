@@ -30,10 +30,8 @@ namespace WhiteLagoon.Application.Services.Implementation
                 Labels = new string[] { "New Customer Bookings", "Returning Customer Bookings" },
                 Series = new decimal[] { bookingsByNewCustomer, bookingsByReturningCustomer }
             };
-
             return PieChartDto;
         }
-
         public async Task<LineChartDto> GetMemberAndBookingLineChartData()
         {
             var bookingData = _unitOfWork.Booking.GetAll(u => u.BookingDate >= DateTime.Now.AddDays(-30) &&
@@ -44,16 +42,14 @@ namespace WhiteLagoon.Application.Services.Implementation
                      DateTime = u.Key,
                      NewBookingCount = u.Count()
                  });
-
             var customerData = _unitOfWork.User.GetAll(u => u.CreatedAt >= DateTime.Now.AddDays(-30) &&
-            u.CreatedAt.Date <= DateTime.Now)
-                .GroupBy(b => b.CreatedAt.Date)
-                .Select(u => new
-                {
-                    DateTime = u.Key,
-                    NewCustomerCount = u.Count()
-                });
-
+u.CreatedAt.Date <= DateTime.Now)
+    .GroupBy(b => b.CreatedAt.Date)
+    .Select(u => new
+    {
+        DateTime = u.Key,
+        NewCustomerCount = u.Count()
+    });
 
             var leftJoin = bookingData.GroupJoin(customerData, booking => booking.DateTime, customer => customer.DateTime,
                 (booking, customer) => new
@@ -62,7 +58,6 @@ namespace WhiteLagoon.Application.Services.Implementation
                     booking.NewBookingCount,
                     NewCustomerCount = customer.Select(x => x.NewCustomerCount).FirstOrDefault()
                 });
-
 
             var rightJoin = customerData.GroupJoin(bookingData, customer => customer.DateTime, booking => booking.DateTime,
                 (customer, booking) => new
@@ -91,7 +86,6 @@ namespace WhiteLagoon.Application.Services.Implementation
                     Data = newCustomerData
                 },
             };
-
             LineChartDto LineChartDto = new()
             {
                 Categories = categories,
@@ -100,7 +94,6 @@ namespace WhiteLagoon.Application.Services.Implementation
 
             return LineChartDto;
         }
-
         public async Task<RadialBarChartDto> GetRegisteredUserChartData()
         {
 
@@ -115,7 +108,6 @@ namespace WhiteLagoon.Application.Services.Implementation
 
             return SD.GetRadialCartDataModel(totalUsers.Count(), countByCurrentMonth, countByPreviousMonth);
         }
-
         public async Task<RadialBarChartDto> GetRevenueChartData()
         {
             var totalBookings = _unitOfWork.Booking.GetAll(u => u.Status != SD.StatusPending
@@ -131,7 +123,6 @@ namespace WhiteLagoon.Application.Services.Implementation
 
             return SD.GetRadialCartDataModel(totalRevenue, countByCurrentMonth, countByPreviousMonth);
         }
-
         public async Task<RadialBarChartDto> GetTotalBookingRadialChartData()
         {
             var totalBookings = _unitOfWork.Booking.GetAll(u => u.Status != SD.StatusPending

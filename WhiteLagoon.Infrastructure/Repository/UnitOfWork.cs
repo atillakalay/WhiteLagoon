@@ -20,7 +20,6 @@ namespace WhiteLagoon.Infrastructure.Repository
             Amenity = new AmenityRepository(_db);
             VillaNumber = new VillaNumberRepository(_db);
         }
-
         public void Save()
         {
             _db.SaveChanges();

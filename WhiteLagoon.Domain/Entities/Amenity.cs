@@ -8,15 +8,11 @@ namespace WhiteLagoon.Domain.Entities
     {
         [Key]
         public int Id { get; set; }
-
         public required string Name { get; set; }
         public string? Description { get; set; }
-
-
         [ForeignKey("Villa")]
         public int VillaId { get; set; }
         [ValidateNever]
         public Villa Villa { get; set; }
-
     }
 }

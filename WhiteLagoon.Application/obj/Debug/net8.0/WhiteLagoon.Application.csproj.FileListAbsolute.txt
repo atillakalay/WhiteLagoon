@@ -1,0 +1,16 @@
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.csproj.AssemblyReference.cache
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.AssemblyInfoInputs.cache
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.AssemblyInfo.cs
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.csproj.CoreCompileInputs.cache
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.sourcelink.json
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net8.0\WhiteLagoon.Application.deps.json
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net8.0\WhiteLagoon.Application.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net8.0\WhiteLagoon.Application.pdb
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net8.0\WhiteLagoon.Domain.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\bin\Debug\net8.0\WhiteLagoon.Domain.pdb
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.csproj.CopyComplete
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\refint\WhiteLagoon.Application.dll
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\WhiteLagoon.Application.pdb
+C:\Users\Atilla\source\repos\WhiteLagoon\WhiteLagoon.Application\obj\Debug\net8.0\ref\WhiteLagoon.Application.dll

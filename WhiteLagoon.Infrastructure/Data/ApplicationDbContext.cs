@@ -14,153 +14,146 @@ namespace WhiteLagoon.Infrastructure.Data
         public DbSet<Amenity> Amenities { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Booking> Bookings { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
             modelBuilder.Entity<Villa>().HasData(
-                new Villa
-                {
-                    Id = 1,
-                    Name = "Kraliyet Villası",
-                    Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                    ImageUrl = "https://placehold.co/600x400",
-                    Occupancy = 4,
-                    Price = 200,
-                    Sqft = 550,
-                },
-                new Villa
-                {
-                    Id = 2,
-                    Name = "Premium Havuzlu Villa",
-                    Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                    ImageUrl = "https://placehold.co/600x401",
-                    Occupancy = 4,
-                    Price = 300,
-                    Sqft = 550,
-                },
-                new Villa
-                {
-                    Id = 3,
-                    Name = "Lüks Havuzlu Villa",
-                    Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                    ImageUrl = "https://placehold.co/600x402",
-                    Occupancy = 4,
-                    Price = 400,
-                    Sqft = 750,
-                });
-
+    new Villa
+    {
+        Id = 1,
+        Name = "Kraliyet Villası",
+        Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+        ImageUrl = "https://placehold.co/600x400",
+        Occupancy = 4,
+        Price = 200,
+        Sqft = 550,
+    },
+    new Villa
+    {
+        Id = 2,
+        Name = "Premium Havuzlu Villa",
+        Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+        ImageUrl = "https://placehold.co/600x401",
+        Occupancy = 4,
+        Price = 300,
+        Sqft = 550,
+    },
+    new Villa
+    {
+        Id = 3,
+        Name = "Lüks Havuzlu Villa",
+        Description = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+        ImageUrl = "https://placehold.co/600x402",
+        Occupancy = 4,
+        Price = 400,
+        Sqft = 750,
+    });
             modelBuilder.Entity<VillaNumber>().HasData(
-                new VillaNumber
-                {
-                    Villa_Number = 101,
-                    VillaId = 1,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 102,
-                    VillaId = 1,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 103,
-                    VillaId = 1,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 104,
-                    VillaId = 1,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 201,
-                    VillaId = 2,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 202,
-                    VillaId = 2,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 203,
-                    VillaId = 2,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 301,
-                    VillaId = 3,
-                },
-                new VillaNumber
-                {
-                    Villa_Number = 302,
-                    VillaId = 3,
-                }
-                );
-
+    new VillaNumber
+    {
+        Villa_Number = 101,
+        VillaId = 1,
+    },
+    new VillaNumber
+    {
+        Villa_Number = 102,
+        VillaId = 1,
+    },
+    new VillaNumber
+    {
+        Villa_Number = 103,
+        VillaId = 1,
+    },
+    new VillaNumber
+    {
+        Villa_Number = 104,
+        VillaId = 1,
+    },
+    new VillaNumber
+    {
+        Villa_Number = 201,
+        VillaId = 2,
+    },
+    new VillaNumber
+    {
+        Villa_Number = 202,
+        VillaId = 2,
+    },
+    new VillaNumber
+    {
+        Villa_Number = 203,
+        VillaId = 2,
+    },
+    new VillaNumber
+    {
+        Villa_Number = 301,
+        VillaId = 3,
+    },
+    new VillaNumber
+    {
+        Villa_Number = 302,
+        VillaId = 3,
+    }
+    );
             modelBuilder.Entity<Amenity>().HasData(
-          new Amenity
-          {
-              Id = 1,
-              VillaId = 1,
-              Name = "Özel Havuz"
-          }, new Amenity
-          {
-              Id = 2,
-              VillaId = 1,
-              Name = "Mikrodalga"
-          }, new Amenity
-          {
-              Id = 3,
-              VillaId = 1,
-              Name = "Özel balkon"
-          }, new Amenity
-          {
-              Id = 4,
-              VillaId = 1,
-              Name = "1 kral yatağı ve 1 koltuk"
-          },
-
-          new Amenity
-          {
-              Id = 5,
-              VillaId = 2,
-              Name = "Özel Dalma Havuzu"
-          }, new Amenity
-          {
-              Id = 6,
-              VillaId = 2,
-              Name = "Mikrodalga ve Mini Buzdolabı"
-          }, new Amenity
-          {
-              Id = 7,
-              VillaId = 2,
-              Name = "Özel Balkon"
-          }, new Amenity
-          {
-              Id = 8,
-              VillaId = 2,
-              Name = "kral yatağı veya 2 adet çift kişilik yatak"
-          },
-
-          new Amenity
-          {
-              Id = 9,
-              VillaId = 3,
-              Name = "Özel Havuz"
-          }, new Amenity
-          {
-              Id = 10,
-              VillaId = 3,
-              Name = "Jakuzi"
-          }, new Amenity
-          {
-              Id = 11,
-              VillaId = 3,
-              Name = "Özel Balkon"
-          });
-
+new Amenity
+{
+    Id = 1,
+    VillaId = 1,
+    Name = "Özel Havuz"
+}, new Amenity
+{
+    Id = 2,
+    VillaId = 1,
+    Name = "Mikrodalga"
+}, new Amenity
+{
+    Id = 3,
+    VillaId = 1,
+    Name = "Özel balkon"
+}, new Amenity
+{
+    Id = 4,
+    VillaId = 1,
+    Name = "1 kral yatağı ve 1 koltuk"
+},
+        new Amenity
+        {
+            Id = 5,
+            VillaId = 2,
+            Name = "Özel Dalma Havuzu"
+        }, new Amenity
+        {
+            Id = 6,
+            VillaId = 2,
+            Name = "Mikrodalga ve Mini Buzdolabı"
+        }, new Amenity
+        {
+            Id = 7,
+            VillaId = 2,
+            Name = "Özel Balkon"
+        }, new Amenity
+        {
+            Id = 8,
+            VillaId = 2,
+            Name = "kral yatağı veya 2 adet çift kişilik yatak"
+        },
+                  new Amenity
+                  {
+                      Id = 9,
+                      VillaId = 3,
+                      Name = "Özel Havuz"
+                  }, new Amenity
+                  {
+                      Id = 10,
+                      VillaId = 3,
+                      Name = "Jakuzi"
+                  }, new Amenity
+                  {
+                      Id = 11,
+                      VillaId = 3,
+                      Name = "Özel Balkon"
+                  });
         }
     }
 }
