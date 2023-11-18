@@ -44,9 +44,6 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip ed
 3. Projeyi Visual Studio veya Visual Studio Code'da açın.
 5. Tarayıcıdan proje arayüzüne erişin ve kullanmaya başlayın.
 
-Daha fazla ayrıntı için lütfen [Kurulum Kılavuzu](/docs/installation.md) belgesine başvurun.
-
-
 ## İletişim
 
 Proje veya kurs hakkında herhangi bir sorunuz veya geri bildiriminiz varsa, lütfen iletişime geçmekten çekinmeyin:
