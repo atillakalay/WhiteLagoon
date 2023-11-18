@@ -26,7 +26,6 @@ Bu proje, ASP.NET Core kullanarak Clean Architecture prensiplerini pratiğe dök
 - .NET Core' da Charts kullanımı
 - Veri tabanı olarak MSSQL kullanma
 - .NET Core'da dinamik pdf, ppt, word oluşturma
-- MVC yapılarını API ile tüketme
 
 ## Gereksinimler
 
