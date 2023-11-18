@@ -49,7 +49,3 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip ed
 Proje veya kurs hakkında herhangi bir sorunuz veya geri bildiriminiz varsa, lütfen iletişime geçmekten çekinmeyin:
 
 - E-posta: [atilla.kalayy@gmail.com](atilla.kalayy@gmail.com)
-
-## Lisans
-
-Bu proje açık kaynaklıdır ve [MIT Lisansı](/LICENSE) altında lisanslanmıştır.
